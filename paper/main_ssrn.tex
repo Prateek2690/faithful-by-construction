@@ -1,0 +1,73 @@
+%% SSRN working-paper version, single column, with cover page.
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{times,graphicx,booktabs,amsmath,amssymb,xcolor,caption,listings}
+\usepackage[hidelinks]{hyperref}
+\captionsetup{font=small,labelfont=bf}
+\lstset{basicstyle=\ttfamily\scriptsize,breaklines=true,frame=single,columns=fullflexible}
+\input{numbers_v5}\input{numbers_v5_example}\input{numbers_v5_robust}
+\newcommand{\figw}{0.62\linewidth}\newcommand{\tabw}{\linewidth}
+%% ---- fill in before posting ------------------------------------------------
+\newcommand{\authorname}{Prateek Bhatnagar}
+\newcommand{\authoremail}{bhatnagar.prateek90@gmail.com}
+\newcommand{\codeurl}{\url{https://github.com/Prateek2690/faithful-by-construction}}
+\newcommand{\datewritten}{October 17, 2026}
+%% ---------------------------------------------------------------------------
+\hypersetup{pdftitle={Faithful by Construction? An Exact Test of LLM Explanations for Constrained Portfolio Optimization Decisions},pdfauthor={\authorname},pdfsubject={Working paper},pdfkeywords={explainable optimization, faithfulness, large language models, portfolio optimization, shadow prices, linear programming, model risk}}
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+{\LARGE\bfseries Faithful by Construction? An Exact Test of LLM Explanations\\[2pt]
+for Constrained Portfolio Optimization Decisions\par}
+\vspace{1.2em}
+{\large \authorname\par}
+{\normalsize Independent Researcher\par}
+{\small \href{mailto:\authoremail}{\texttt{\authoremail}}\par}
+\vspace{0.8em}
+{\small This version: \datewritten\par}
+{\small\itshape Working paper\par}
+\end{center}
+\vspace{1em}
+\begin{abstract}\noindent\input{abstract}\end{abstract}
+\vspace{0.6em}
+\noindent\textbf{Keywords:} explainable optimization; faithfulness; large language models;
+portfolio optimization; shadow prices; linear programming; model risk.\\[0.3em]
+\noindent\textbf{JEL classification:} G11, C61, C45, G23, C63.
+
+\vspace{0.8em}
+\noindent\textbf{AI disclosure.} The author used Claude (Anthropic) for coding assistance,
+literature search and editing. All results were checked against the saved model outputs,
+and the author is responsible for the content. An Anthropic model, Claude Sonnet~4.5, is
+among the models evaluated.
+
+\vspace{0.4em}
+\noindent\textbf{Data and code.} Code, model replies, scored results and the scripts that
+produce every number, table and figure are available at \codeurl. The ICE BofA spread data
+are not redistributed. The repository includes a script that downloads all series from
+FRED, and the problem instances are rebuilt from that download and fixed random seeds.
+\newpage
+\setcounter{page}{1}
+\input{body}
+\input{refs}
+\appendix
+\clearpage
+\section{Prompt (with-facts version)}
+\label{app:prompt}
+The basic version omits the ``Portfolio facts'' line. Values are filled in for each
+problem, and all held bonds are listed (the example below truncates the list). The
+prompt's ``book yield'' is the objective $y^\top x$ of (\ref{eq:lp}).
+\lstinputlisting{prompt_example.txt}
+
+\section{Reproducing the numbers}
+\label{app:repro}
+{\sloppy All results are computed from the saved model replies, and no API calls are
+needed. \texttt{fetch\_fred\_universe.py} downloads the FRED series and builds the asset
+universes (use \texttt{--end 2026-10-14} to obtain the data used here; the repository
+gives its SHA-256 checksum). \texttt{run\_final\_study.py} builds the problems and queries
+the models (seed 7 for the natural set; seed 11 with \texttt{--require\_slack} for the
+slack-focused set). \texttt{reproduce.sh} then runs \texttt{make\_v5\_numbers.py},
+\texttt{make\_v5\_example.py}, \texttt{robustness\_v5.py}, \texttt{computability\_v5.py},
+\texttt{make\_v5\_table.py} and \texttt{make\_v5\_figures.py}, which produce every number,
+the table and the figures. \texttt{audit\_numbers.py} recomputes the reported figures from
+the result files and checks them against this PDF.\par}
+\end{document}

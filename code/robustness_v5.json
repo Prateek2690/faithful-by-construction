@@ -1,0 +1,340 @@
+{
+ "explainers": {
+  "CG": {
+   "zero_named": [
+    0,
+    149
+   ],
+   "binding_named": [
+    439,
+    439
+   ],
+   "p_named_given_zero": 0.0,
+   "p_named_given_binding": 1.0,
+   "share_name_all3": 0.39285714285714285,
+   "mean_named": 2.239795918367347,
+   "n_expl": 196
+  },
+  "ALWAYS_CAP_DUR": {
+   "zero_named": [
+    74,
+    149
+   ],
+   "binding_named": [
+    318,
+    439
+   ],
+   "p_named_given_zero": 0.4966442953020134,
+   "p_named_given_binding": 0.724373576309795,
+   "share_name_all3": 0.0,
+   "mean_named": 2.0,
+   "n_expl": 196
+  },
+  "openai/gpt-4o-mini/FF": {
+   "zero_named": [
+    88,
+    149
+   ],
+   "binding_named": [
+    315,
+    439
+   ],
+   "p_named_given_zero": 0.5906040268456376,
+   "p_named_given_binding": 0.7175398633257403,
+   "share_name_all3": 0.05612244897959184,
+   "mean_named": 2.056122448979592,
+   "n_expl": 196
+  },
+  "openai/gpt-4o-mini/FF_informed": {
+   "zero_named": [
+    55,
+    149
+   ],
+   "binding_named": [
+    415,
+    439
+   ],
+   "p_named_given_zero": 0.3691275167785235,
+   "p_named_given_binding": 0.9453302961275627,
+   "share_name_all3": 0.3979591836734694,
+   "mean_named": 2.3979591836734695,
+   "n_expl": 196
+  },
+  "anthropic/claude-sonnet-4.5/FF": {
+   "zero_named": [
+    132,
+    149
+   ],
+   "binding_named": [
+    431,
+    439
+   ],
+   "p_named_given_zero": 0.8859060402684564,
+   "p_named_given_binding": 0.9817767653758542,
+   "share_name_all3": 0.8724489795918368,
+   "mean_named": 2.872448979591837,
+   "n_expl": 196
+  },
+  "anthropic/claude-sonnet-4.5/FF_informed": {
+   "zero_named": [
+    128,
+    149
+   ],
+   "binding_named": [
+    439,
+    439
+   ],
+   "p_named_given_zero": 0.8590604026845637,
+   "p_named_given_binding": 1.0,
+   "share_name_all3": 0.8928571428571429,
+   "mean_named": 2.892857142857143,
+   "n_expl": 196
+  },
+  "google/gemini-2.5-flash/FF": {
+   "zero_named": [
+    114,
+    149
+   ],
+   "binding_named": [
+    394,
+    439
+   ],
+   "p_named_given_zero": 0.7651006711409396,
+   "p_named_given_binding": 0.89749430523918,
+   "share_name_all3": 0.5918367346938775,
+   "mean_named": 2.5918367346938775,
+   "n_expl": 196
+  },
+  "google/gemini-2.5-flash/FF_informed": {
+   "zero_named": [
+    71,
+    149
+   ],
+   "binding_named": [
+    439,
+    439
+   ],
+   "p_named_given_zero": 0.47651006711409394,
+   "p_named_given_binding": 1.0,
+   "share_name_all3": 0.6071428571428571,
+   "mean_named": 2.6020408163265305,
+   "n_expl": 196
+  }
+ },
+ "paired": {
+  "Son_basic_vs_facts": {
+   "n": 149,
+   "a_only": 16,
+   "b_only": 12,
+   "p": 0.5715881884098053
+  },
+  "Gem_basic_vs_facts": {
+   "n": 149,
+   "a_only": 56,
+   "b_only": 13,
+   "p": 1.6837633430122172e-07
+  },
+  "Gpt_basic_vs_facts": {
+   "n": 149,
+   "a_only": 55,
+   "b_only": 22,
+   "p": 0.00021680385841747665
+  },
+  "Son_vs_Gem_basic": {
+   "n": 149,
+   "a_only": 33,
+   "b_only": 15,
+   "p": 0.013283281562245008
+  },
+  "Son_vs_Gem_facts": {
+   "n": 149,
+   "a_only": 59,
+   "b_only": 2,
+   "p": 1.6410484082740595e-15
+  },
+  "Gem_facts_vs_template": {
+   "n": 149,
+   "a_only": 45,
+   "b_only": 48,
+   "p": 0.8358461346314852
+  },
+  "Son_facts_vs_template": {
+   "n": 149,
+   "a_only": 72,
+   "b_only": 18,
+   "p": 8.070744444115692e-09
+  }
+ },
+ "by_limit": {
+  "CG": {
+   "duration_ceiling": [
+    0,
+    74
+   ],
+   "quality_floor": [
+    0,
+    75
+   ]
+  },
+  "ALWAYS_CAP_DUR": {
+   "duration_ceiling": [
+    74,
+    74
+   ],
+   "quality_floor": [
+    0,
+    75
+   ]
+  },
+  "openai/gpt-4o-mini/FF": {
+   "duration_ceiling": [
+    63,
+    74
+   ],
+   "quality_floor": [
+    25,
+    75
+   ]
+  },
+  "openai/gpt-4o-mini/FF_informed": {
+   "duration_ceiling": [
+    21,
+    74
+   ],
+   "quality_floor": [
+    34,
+    75
+   ]
+  },
+  "anthropic/claude-sonnet-4.5/FF": {
+   "duration_ceiling": [
+    60,
+    74
+   ],
+   "quality_floor": [
+    72,
+    75
+   ]
+  },
+  "anthropic/claude-sonnet-4.5/FF_informed": {
+   "duration_ceiling": [
+    56,
+    74
+   ],
+   "quality_floor": [
+    72,
+    75
+   ]
+  },
+  "google/gemini-2.5-flash/FF": {
+   "duration_ceiling": [
+    45,
+    74
+   ],
+   "quality_floor": [
+    69,
+    75
+   ]
+  },
+  "google/gemini-2.5-flash/FF_informed": {
+   "duration_ceiling": [
+    26,
+    74
+   ],
+   "quality_floor": [
+    45,
+    75
+   ]
+  }
+ },
+ "tolerance": {
+  "openai/gpt-4o-mini|issuer_cap": {
+   "n": 352,
+   "tol0.2": 0.014204545454545454,
+   "tol0.35": 0.05397727272727273,
+   "tol0.5": 0.07670454545454546,
+   "within2x": 0.08806818181818182
+  },
+  "openai/gpt-4o-mini|duration_ceiling": {
+   "n": 228,
+   "tol0.2": 0.0,
+   "tol0.35": 0.0,
+   "tol0.5": 0.0043859649122807015,
+   "within2x": 0.0043859649122807015
+  },
+  "openai/gpt-4o-mini|quality_floor": {
+   "n": 150,
+   "tol0.2": 0.12,
+   "tol0.35": 0.21333333333333335,
+   "tol0.5": 0.35333333333333333,
+   "within2x": 0.49333333333333335
+  },
+  "google/gemini-2.5-flash|issuer_cap": {
+   "n": 392,
+   "tol0.2": 0.03316326530612245,
+   "tol0.35": 0.05612244897959184,
+   "tol0.5": 0.08673469387755102,
+   "within2x": 0.10459183673469388
+  },
+  "google/gemini-2.5-flash|duration_ceiling": {
+   "n": 201,
+   "tol0.2": 0.004975124378109453,
+   "tol0.35": 0.004975124378109453,
+   "tol0.5": 0.009950248756218905,
+   "within2x": 0.01990049751243781
+  },
+  "google/gemini-2.5-flash|quality_floor": {
+   "n": 240,
+   "tol0.2": 0.075,
+   "tol0.35": 0.125,
+   "tol0.5": 0.2,
+   "within2x": 0.3416666666666667
+  },
+  "anthropic/claude-sonnet-4.5|issuer_cap": {
+   "n": 391,
+   "tol0.2": 0.06905370843989769,
+   "tol0.35": 0.11253196930946291,
+   "tol0.5": 0.1918158567774936,
+   "within2x": 0.19948849104859334
+  },
+  "anthropic/claude-sonnet-4.5|duration_ceiling": {
+   "n": 238,
+   "tol0.2": 0.0,
+   "tol0.35": 0.0,
+   "tol0.5": 0.008403361344537815,
+   "within2x": 0.01680672268907563
+  },
+  "anthropic/claude-sonnet-4.5|quality_floor": {
+   "n": 241,
+   "tol0.2": 0.07468879668049792,
+   "tol0.35": 0.12448132780082988,
+   "tol0.5": 0.15352697095435686,
+   "within2x": 0.3153526970954357
+  },
+  "pooled_son_gem": {
+   "n": 1703,
+   "tol0.2": 0.04521432765707575,
+   "tol0.35": 0.0745742806811509,
+   "tol0.5": 0.11626541397533764,
+   "within2x": 0.1673517322372284
+  }
+ },
+ "cluster_boot_ci": {
+  "anthropic/claude-sonnet-4.5/FF": [
+   0.8344370860927153,
+   0.9337748344370861
+  ],
+  "anthropic/claude-sonnet-4.5/FF_informed": [
+   0.8050314465408805,
+   0.9090909090909091
+  ],
+  "google/gemini-2.5-flash/FF": [
+   0.6987179487179487,
+   0.8287671232876712
+  ],
+  "google/gemini-2.5-flash/FF_informed": [
+   0.4,
+   0.5492957746478874
+  ]
+ }
+}

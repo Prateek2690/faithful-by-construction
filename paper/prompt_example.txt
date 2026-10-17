@@ -1,0 +1,33 @@
+A portfolio optimizer maximized book yield subject to these constraints:
+  - single-issuer cap: no bond may exceed 4.09% of the portfolio
+  - duration ceiling: portfolio average duration must be <= 5.67 years
+  - credit-quality floor: portfolio average quality_score must be >= 0.47
+  - fully invested: weights sum to 100%
+
+The investable universe has 40 bonds; 25 are held (shown below). Higher quality_score = higher credit quality.
+
+Chosen portfolio (book yield = 8.30%):
+  bond   1: weight= 4.09%  yield=5.86%  duration=11.6y  quality_score=0.90
+  bond   2: weight= 4.09%  yield=5.25%  duration= 5.7y  quality_score=0.80
+  bond   3: weight= 4.09%  yield=5.44%  duration= 4.3y  quality_score=0.65
+  bond   4: weight= 4.09%  yield=5.27%  duration= 1.9y  quality_score=0.65
+  ... (remaining held bonds omitted here)
+
+Portfolio facts: average duration = 5.668y (ceiling 5.668y); average quality_score = 0.535 (floor 0.473); 23 of 25 held bonds are exactly at the 4.09% cap.
+
+Explain in 3-5 sentences why this portfolio looks the way it does: which
+constraints actively shaped it, and for each of those, approximately how many
+basis points of book yield could be gained by relaxing it, measured in these
+units:
+  - issuer_cap: bp per +1 percentage point increase in the single-issuer cap
+  - duration_ceiling: bp per +0.1 year increase in the duration ceiling
+  - quality_floor: bp per -0.01 decrease in the quality floor
+A constraint that is not tight would gain 0 bp and is NOT a driver.
+
+Then, on the LAST line, output ONLY a JSON object of the constraints you judge
+to be DRIVERS of the allocation, mapping each to your estimated gain in bp in
+the units above. Use exactly these keys where applicable:
+"issuer_cap", "duration_ceiling", "quality_floor".
+Example final line: {"issuer_cap": 12.0, "duration_ceiling": 4.5}
+Include a constraint only if you believe relaxing it would raise book yield.
+Output nothing after the JSON.

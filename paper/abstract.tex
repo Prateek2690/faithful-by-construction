@@ -1,0 +1,25 @@
+When a constrained optimizer selects a portfolio, managers, auditors and
+regulators ask \emph{why}. Large language models (LLMs) are increasingly used to
+answer in plain language, but a fluent explanation can cite reasons that did not
+drive the decision. In a linear program, the effect of every constraint on the
+optimum is known from the solver's certificate and can be confirmed by relaxing
+the constraint and re-solving. Each claim in an explanation (``this limit drove
+the allocation and is worth about $x$ basis points'') can therefore be checked
+against ground truth rather than against another model or a human judge. We
+apply this test to \nProblems{} bond-portfolio problems built from public FRED
+data on US Treasury yields and ICE BofA credit spreads (May to October 2026),
+scoring explanations written by Claude Sonnet~4.5 and Gemini~2.5 Flash without
+access to the certificate. Across \nSlackCases{} cases in which a limit had
+exactly zero effect on the optimum, the models named it as a driver in
+\snSonFf\% (Claude) and \snGemFf\% (Gemini) of cases, while naming binding limits
+in \bindSonFf\% and \bindGemFf\% of cases. Giving the models the portfolio facts
+that show which limits are tight left Claude's rate essentially unchanged
+(\snSonInf\%) and reduced Gemini's to \snGemInf\%, no better than a fixed template
+that always names the same two limits (\snTmpl\%). The models' estimates of what
+each binding limit costs were within $\pm$35\% of the true value in \magMain\% of
+\nMagMain{} claims, with median errors ranging from $\ratioMainCap\times$ to
+$\ratioMainDur\times$ the true value and in the same direction for both
+vendors, even though the holdings shown to the models determine the true
+values. A third model, GPT-4o-mini, copied the numbers in the prompt's format
+example and is reported separately. Explanations generated from the
+certificate avoid both errors by construction.

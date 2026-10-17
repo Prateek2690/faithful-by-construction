@@ -1,0 +1,27 @@
+{
+ "main": {
+  "problems_determined": 96,
+  "problems": 96,
+  "binding_limits_determined": 262,
+  "binding_limits": 262
+ },
+ "slack": {
+  "problems_determined": 100,
+  "problems": 100,
+  "binding_limits_determined": 177,
+  "binding_limits": 177
+ },
+ "total": {
+  "problems_determined": 196,
+  "problems": 196,
+  "binding_limits_determined": 439,
+  "binding_limits": 439
+ },
+ "exact_max_rel_err": 1.5690486842129887,
+ "exact_within_1e-6": 0.7403189066059226,
+ "exact_within_1pct": 0.8724373576309795,
+ "exact_n_off": 56,
+ "displayed_within35": 0.9908883826879271,
+ "displayed_within10": 0.9772209567198178,
+ "displayed_n": 439
+}

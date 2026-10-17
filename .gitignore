@@ -1,0 +1,21 @@
+# secrets
+.env
+*.key
+# data that may not be redistributed (ICE BofA via FRED)
+fred_raw.csv
+fred_universe.csv
+# generated outputs (rebuilt by reproduce.sh)
+code/numbers_v5*.tex
+code/table_v5.tex
+code/fig_v5_*.pdf
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+# Python
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
