@@ -18,4 +18,6 @@ preferred-citation:
     - family-names: Bhatnagar
       given-names: Prateek
   year: 2026
-  notes: "Working paper"
+  journal: "SSRN Working Paper"
+  url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7625878"
+  notes: "Working paper, not peer-reviewed."
