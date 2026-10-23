@@ -1,7 +1,7 @@
 # Faithful by Construction? An Exact Test of LLM Explanations for Constrained Portfolio Optimization Decisions
 
 Code, model replies and scored results for the working paper by **Prateek Bhatnagar** (Independent Researcher), October 2026.
-SSRN: [abstract 7625878](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7625878) (posted 19 October 2026; a working paper, not yet peer-reviewed).
+SSRN: [abstract 7625878](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7625878) · DOI [10.2139/ssrn.7625878](https://doi.org/10.2139/ssrn.7625878) (posted 19 October 2026; a working paper, not yet peer-reviewed).
 
 ## What this repository contains
 | Path | Contents |
@@ -54,7 +54,7 @@ Model providers update their models, so new runs may not match the saved replies
 
 ## Citation
 See `CITATION.cff`. Cite as:
-> Bhatnagar, P. (2026). *Faithful by Construction? An Exact Test of LLM Explanations for Constrained Portfolio Optimization Decisions.* SSRN Working Paper 7625878. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7625878
+> Bhatnagar, P. (2026). *Faithful by Construction? An Exact Test of LLM Explanations for Constrained Portfolio Optimization Decisions.* SSRN Working Paper 7625878. https://doi.org/10.2139/ssrn.7625878
 
 ## AI disclosure
 The author used Claude (Anthropic) for coding assistance, literature search and editing. An Anthropic model, Claude Sonnet 4.5, is among the models evaluated.
